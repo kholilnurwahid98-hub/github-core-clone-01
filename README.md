@@ -1,9 +1,13 @@
-# GitHub-compatible git forge — make.fun bounty `github-core-clone-01`
+# github-core-clone-01
+
+[![make.fun · github-core-clone-01](https://make.fun/badge/github-core-clone-01.svg)](https://make.fun/bounty/github-core-clone-01?utm_source=github&utm_medium=readme&utm_campaign=github-core-clone-01)
+[![rank](https://make.fun/badge/github-core-clone-01/kholilnurwahid98-hub/github-core-clone-01/rank.svg)](https://make.fun/bounty/github-core-clone-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=github-core-clone-01)
+[![reward](https://make.fun/badge/github-core-clone-01/kholilnurwahid98-hub/github-core-clone-01/reward.svg)](https://make.fun/bounty/github-core-clone-01?utm_source=github&utm_medium=readme&utm_campaign=github-core-clone-01)
 
 A standalone, single-process GitHub-compatible git forge: git smart HTTP,
 REST v3, GraphQL v4 and MCP, all served from one deterministic in-memory
-store. Built for the [make.fun bounty](https://make.fun/bounty/github-core-clone-01)
-**Build a GitHub-compatible git forge** (total prize $500).
+store. Built by an AI agent for the [make.fun bounty](https://make.fun/bounty/github-core-clone-01)
+**Build a GitHub-compatible git forge** (total prize $500 in USDC).
 
 Node 22, standard library only (`node:http`, `node:crypto`, `node:zlib`).
 No dependencies, no package manager step, no `git` binary, no outside
@@ -45,26 +49,23 @@ a logical clock, no wall time or unseeded randomness in any state).
 
 ## Layout
 
-- `main.ts` — harness lifecycle (bind ephemeral port, register, poll done, exit 0). Keep as is.
+- `main.ts` — harness lifecycle (bind ephemeral port, register, poll done, exit 0).
 - `app.ts` — the whole forge: git smart HTTP (v2 + v0, shallow/deepen, packs),
   REST v3 (repos, branches, commits, contents, labels, issues, comments,
   pulls, merges), GraphQL (the documents `gh` and `github-mcp-server` send),
   and MCP over Streamable HTTP (`server/discover` + legacy `initialize`).
 - `package.json`, `tsconfig.json`, `LICENSE` (MIT).
 
-## Submission plan (not done yet — do not push without the owner)
+## Entry
 
-1. Create a **public** GitHub repository under **`kholilnurwahid98-hub`**,
-   created **after 2026-11-14 06:30 UTC** (the bounty requires a repo
-   created after that time). Suggested name: `github-core-clone-01`.
-2. Push this directory as-is: `main.ts` at the repo root, MIT `LICENSE`.
-3. Submit the repo URL to make.fun before the entry deadline
-   **2026-11-21 06:30 UTC (13:30 WIB)**.
+Public repository under **`kholilnurwahid98-hub`**, entered on make.fun
+for bounty `github-core-clone-01` before the entry deadline
+**2026-11-21 06:30 UTC (13:30 WIB)**.
 
 ### `.makefun/owner.json`
 
 Only required if the GitHub repository owner differs from the login of
-the make.fun account that submits the entry. The entry repo will live
+the make.fun account that submits the entry. The entry repo lives
 under `kholilnurwahid98-hub`, the user's own account, so the file is **not
 needed** and is deliberately **not** shipped here. If it ever becomes
 necessary, create `.makefun/owner.json` at submission time containing
@@ -85,3 +86,7 @@ the linked Solana wallet — never invent or hardcode a wallet address.
   conflict (HTTP 405, GraphQL `CONFLICTING`).
 - **Determinism.** All timestamps come from a logical counter, never the
   wall clock, so two runs on the same instance export identical state.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=github-core-clone-01) · AI agents build software for cash rewards</sub>
